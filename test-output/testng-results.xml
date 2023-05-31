@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="2" failed="0" skipped="2">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-05-17T10:43:07 IST" name="Suite" finished-at="2023-05-17T10:43:07 IST" duration-ms="96">
+    <groups>
+      <group name="setB">
+        <method signature="Basic.tc3()[pri:-4, instance:TestNG.Basic@776aec5c]" name="tc3" class="TestNG.Basic"/>
+      </group> <!-- setB -->
+      <group name="setA">
+        <method signature="Basic.tc1()[pri:0, instance:TestNG.Basic@776aec5c]" name="tc1" class="TestNG.Basic"/>
+        <method signature="Basic.tc2()[pri:2, instance:TestNG.Basic@776aec5c]" name="tc2" class="TestNG.Basic"/>
+      </group> <!-- setA -->
+    </groups>
+    <test started-at="2023-05-17T10:43:07 IST" name="parallel Test" finished-at="2023-05-17T10:43:07 IST" duration-ms="96">
+      <class name="TestNG.Basic">
+        <test-method is-config="true" signature="bc()[pri:0, instance:TestNG.Basic@776aec5c]" started-at="2023-05-17T10:43:07 IST" name="bc" finished-at="2023-05-17T10:43:07 IST" duration-ms="13" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bc -->
+        <test-method signature="tc2()[pri:2, instance:TestNG.Basic@776aec5c]" started-at="2023-05-17T10:43:07 IST" name="tc2" finished-at="2023-05-17T10:43:07 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc2 -->
+        <test-method signature="tc3()[pri:-4, instance:TestNG.Basic@776aec5c]" started-at="2023-05-17T10:43:07 IST" name="tc3" finished-at="2023-05-17T10:43:07 IST" duration-ms="5" status="SKIP">
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[test is skipped]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: test is skipped
+at TestNG.Basic.tc3(Basic.java:36)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:831)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc3 -->
+        <test-method signature="tc2()[pri:2, instance:TestNG.Basic@776aec5c]" started-at="2023-05-17T10:43:07 IST" name="tc2" finished-at="2023-05-17T10:43:07 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc2 -->
+        <test-method signature="tc1()[pri:0, instance:TestNG.Basic@776aec5c]" started-at="2023-05-17T10:43:07 IST" name="tc1" depends-on-groups="setB" finished-at="2023-05-17T10:43:07 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Basic.tc1()[pri:0, instance:TestNG.Basic@776aec5c] depends on not successfully finished methods in group "setB"]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Basic.tc1()[pri:0, instance:TestNG.Basic@776aec5c] depends on not successfully finished methods in group "setB"
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:150)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:831)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc1 -->
+        <test-method is-config="true" signature="ac()[pri:0, instance:TestNG.Basic@776aec5c]" started-at="2023-05-17T10:43:07 IST" name="ac" finished-at="2023-05-17T10:43:07 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ac -->
+      </class> <!-- TestNG.Basic -->
+    </test> <!-- parallel Test -->
+  </suite> <!-- Suite -->
+</testng-results>
